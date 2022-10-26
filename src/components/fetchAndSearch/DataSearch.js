@@ -10,17 +10,27 @@ function DataSearch() {
   const [isLoading, setIsLoading] = useState(false)
   const [searchValue, setSearchValue] = useState("DNA")
 
-
-  async function getData(){
-    setIsLoading(true)
-    const response = await fetch(`http://api.plos.org/search?q=title:${searchValue}`)
-    const data = await response.json()
-    setResult(data)
-    setIsLoading(false)
-  }
+  // No Lint error here
+  // async function getData(){
+  //   setIsLoading(true)
+  //   const response = await fetch(`http://api.plos.org/search?q=title:${searchValue}`)
+  //   const data = await response.json()
+  //   setResult(data)
+  //   setIsLoading(false)
+  // }
+  
 
   // 
   useEffect(() => {
+    // No Lint error here, see line 13
+    async function getData(){
+      setIsLoading(true)
+      const response = await fetch(`http://api.plos.org/search?q=title:${searchValue}`)
+      const data = await response.json()
+      setResult(data)
+      setIsLoading(false)
+    }
+
     getData()
   }, [searchValue])
 
