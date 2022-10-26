@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Button from '@mui/material/Button';
+import { TextField } from '@mui/material';
 
 function SearchFeature({setSearchValue}) {
 
@@ -15,8 +17,8 @@ function SearchFeature({setSearchValue}) {
 
     return (
         <div>
-            <input type="text" name="search" placeholder="Search..." onChange={handleChange} />
-            <button onClick={runSearch}>Search</button>
+            <TextField id="standard-basic" label="Standard" variant="standard" name="search" placeholder="Search..." onChange={handleChange} />
+            <Button onClick={runSearch} variant="contained">Search</Button>
         </div>
     )
 }

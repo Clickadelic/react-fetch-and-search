@@ -1,6 +1,8 @@
 import React from 'react'
-import ArticleItem from './ArticleItem'
 
+import ArticleItem from './ArticleItem'
+// Mui ul instead of normal HTML ul
+import List from '@mui/material/List';
 
 function ArticleList({ result }) {
 
@@ -9,14 +11,10 @@ function ArticleList({ result }) {
             return <ArticleItem key={article.id} title={article.title_display} />
         })
         return (
-            <div>
-                <ul>
-                    {listOfArticles}
-                </ul>
-            </div>
+            <List children={listOfArticles} />
         )
     }
-    
+
 }
 
 export default ArticleList

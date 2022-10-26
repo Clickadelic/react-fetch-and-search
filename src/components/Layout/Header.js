@@ -9,9 +9,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Header() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, mb: 5 }}>
       <AppBar position="static">
         <Toolbar>
+          <Button color="inherit">Hackernews</Button>
+          
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            Fetch and Search
+          </Typography>
           <IconButton
             size="large"
             edge="start"
@@ -21,10 +26,6 @@ export default function Header() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Fetch and Search
-          </Typography>
-          <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
     </Box>
