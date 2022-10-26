@@ -42,7 +42,6 @@ function DataSearch() {
   
     return (
       <div>
-        <h1>Fetch data with search</h1>
         <SearchFeature setSearchValue={setSearchValue} />
         {/* Verschachtelungstiefe hier bestimmen, evtl. schon am Objekt tiefer !! Achtung Verwirrungsgefahr*/}
         <ArticleList result={result.response} />
