@@ -1,9 +1,9 @@
 import React from 'react'
-// import ListItem from '@mui/material/ListItem';
+import ListItem from '@mui/material/ListItem';
 
 function ArticleItem({title}) {
   return (
-    <li>{title}</li>
+    <ListItem sx={{display:'block'}} children={title} />
   )
 }
 

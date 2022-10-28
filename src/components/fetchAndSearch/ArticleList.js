@@ -7,6 +7,7 @@ import List from '@mui/material/List';
 function ArticleList({ result }) {
 
     if(result){
+        console.log(result.docs)
         const listOfArticles = result.docs.map((article) => {
             return <ArticleItem key={article.id} title={article.title_display} />
         })

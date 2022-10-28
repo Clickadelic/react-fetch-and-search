@@ -28,10 +28,10 @@ function DataSearch() {
         setResult(data)
         setIsLoading(false)
       }
-
       getData()
     }, [searchValue])
 
+    // If loading is still true, stop here and "return" the loading spinner
     if(isLoading) {
       return(
         <CircularProgress />
