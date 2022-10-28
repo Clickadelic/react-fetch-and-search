@@ -13,10 +13,13 @@ function NewPost() {
 
     function handleChange(event){
 
-        // Objekt zurück geben nach =>
-        setNewPost( prevValue => ({
+        // Objekt zurück geben nach => in den runden Klammern
+        setNewPost( prevValue => (
+            // hier wird Objekt + neuer key/Value festgelegt
+            {
             ...prevValue, [event.target.name]:event.target.value
-        }))
+            }
+        ))
     }
 
     console.log(newPost)
@@ -24,7 +27,7 @@ function NewPost() {
     function postArticle(e){
 
         e.preventDefault()
-
+        // Options für den Request
         const options = {
             method: "POST",
             mode: "no-cors",
